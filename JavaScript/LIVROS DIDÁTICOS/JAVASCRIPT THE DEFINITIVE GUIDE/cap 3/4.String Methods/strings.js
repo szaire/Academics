@@ -1,0 +1,14 @@
+var s = "hello, world"                          // Start with some text.
+document.write(s.charAt(0)+'<br>')              // => "h": the first character.
+document.write(s.charAt(s.length-1)+'<br>')     // => "d": the last character.
+document.write(s.substring(1,4)+'<br>')         // => "ell": the 2nd, 3rd and 4th characters.
+document.write(s.slice(1,4)+'<br>')             // => "ell": same thing
+document.write(s.slice(-3)+'<br>')              // => "rld": last 3 characters
+document.write(s.slice(7)+'<br>')               // => "world": delete the first 7 characters
+document.write(s.indexOf("l")+'<br>')           // => 2: position of first letter l.
+document.write(s.lastIndexOf("l")+'<br>')       // => 10: position of last letter l.
+document.write(s.indexOf("l", 3)+'<br>')        // => 3: position of first "l" at or after 3
+document.write(s.length+'<br>')                 // => 12, the string's length
+document.write(s.split(", ")+'<br>')            // => ["hello", "world"] split into substrings
+document.write(s.replace("h", "H")+'<br>')      // => "Hello, world": replaces all instances
+document.write(s.toUpperCase()+'<br>')          // => "HELLO, WORLD"

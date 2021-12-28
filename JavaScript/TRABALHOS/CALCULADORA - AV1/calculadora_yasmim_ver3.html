@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    var operacao = prompt("Qual operação você deseja realizar? Escolha entre: \n • soma \n • subtração \n • multiplicação \n • divisão \n • potência \n • porcentagem \n • raiz quadrada \n • comparação \n • módulo \n (Atente para os acentos, cedilhas e letras minúsculas das palavras)");
+    
+    if (operacao != "soma" && operacao != "subtração" && operacao != "multiplicação" && operacao != "divisão" && operacao != "potência" && operacao != "porcentagem" && operacao != "raiz quadrada" && operacao != "comparação" && operacao != "módulo") {
+        alert("Por favor, escolha e digite apenas uma das opções de operação fornecidas. Atualize a página para tentar novamente.");
+    }
+
+    if (operacao == "soma") {
+        var n1 = parseFloat(prompt("Digite a primeira parcela (valor a ser somado)"));
+        var n2 = parseFloat(prompt("Digite a segunda parcela (valor a ser somado)"));
+        var soma = n1 + n2;
+        if (n1 >= 0 ) {
+            if (n2 >= 0) {
+                document.write(n1 + " + " + n2 + " = " + soma);
+            } else {
+                document.write(n1 + " + " + "(" + n2 + ") = " + soma);
+            }
+            
+        }
+        if (n1 < 0) {
+            if (n2 >= 0) {
+                document.write("(" + n1 + ") + " + n2 + " = " + soma);
+            } else {
+                document.write("(" + n1 + ") + (" + n2 + ") = " + soma);
+            }
+        }
+        
+    }
+
+    if (operacao == "subtração") {
+        var n1 = parseFloat(prompt("Digite o minuendo (primeiro valor)"));
+        var n2 = parseFloat(prompt("Digite o subtraendo (segundo valor, a ser subtraído do primeiro)"));
+        var subtracao = n1 - n2;
+        if (n1 >= 0) {
+            if (n2 >= 0) {
+                document.write(n1 + " - " + n2 + " = " + subtracao);
+            } else {
+                document.write(n1 + " - (" + n2 + ") = " + subtracao);
+            }
+        }
+        if (n1 < 0) {
+            if (n2 >= 0) {
+                document.write("("+ n1 + ") - " + n2 + " = " + subtracao);
+            } else {
+                document.write("("+ n1 + ") - (" + n2 + ") = " + subtracao);
+            }
+        }
+        
+    }
+    
+    if (operacao == "multiplicação") {
+        var n1 = parseFloat(prompt("Digite o primeiro fator (valor a ser multiplicado)"));
+        var n2 = parseFloat(prompt("Digite o segundo fator (valor a ser multiplicado)"));
+        var multiplicacao = n1 * n2;
+        if (n1 >= 0) {
+            if (n2 >= 0) {
+                document.write(n1 + " * " + n2 + " = " + multiplicacao);
+            } else {
+                document.write(n1 + " * (" + n2 + ") = " + multiplicacao);
+            }
+        }
+        if (n1 < 0) {
+            if (n2 >= 0) {
+                document.write("(" + n1 + ") * " + n2 + " = " + multiplicacao);
+            } else {
+                document.write("(" + n1 + ") * (" + n2 + ") = " + multiplicacao);
+            }
+        }
+    }
+
+    if (operacao == "divisão") {
+        var n1 = parseFloat(prompt("Digite o dividendo"));
+        var n2 = parseFloat(prompt("Digite o divisor"));
+        var divisao = n1/n2;
+        if (n1 >= 0) {
+            if(n2 > 0) {
+                document.write(n1 + " / " + n2 + " = " + divisao);                
+            } else {
+                if (n2 < 0) {
+                    document.write(n1 + " / (" + n2 + ") = " + divisao);
+                }
+                if (n2 == 0) {
+                    document.write(n1 + " / " + n2 + " = Erro. Favor escolher um número diferente de zero para o divisor.");                   
+                }
+            }
+        } else {
+            if (n2 > 0) {
+                document.write("(" + n1 + ") / " + n2 + " = " + divisao);
+            } else {
+                if (n2 < 0) {
+                    document.write("(" + n1 + ") / (" + n2 + ") = " + divisao);
+                }
+                if (n2 == 0) {
+                    document.write("(" + n1 + ") / " + n2 + " = Erro. Favor escolher um número diferente de zero para o divisor.");                   
+                }                
+            }
+        }
+    }
+
+    if (operacao == "potência") {
+        var n1 = parseFloat(prompt("Digite a base do expoente"));
+        var n2 = parseFloat(prompt("Digite o expoente"));
+        var potencia = n1 ** n2;
+        if (n1 >= 0) {
+            if (n1 > 0) {
+                if (n2 >= 0) {
+                    document.write(n1 + "^" + n2 + " = " + potencia);
+                } else {
+                    document.write(n1 + "^(" + n2 + ") = " + potencia);
+                }
+            }
+            if (n1 == 0) {
+                if (n2 >= 0) {
+                    document.write(n1 + "^" + n2 + " = " + potencia);
+                } else {
+                    document.write(n1 + "^(" + n2 + ") = Indeterminação!");
+                }
+            }
+        } else {
+            if (n2 >= 0) {
+                document.write("(" + n1 + ")^" + n2 + " = " + potencia);
+            } else {
+                document.write("(" + n1 + ")^(" + n2 + ") = " + potencia);
+            }
+        }
+    }     
+       
+               
+    
+    if (operacao == "porcentagem") {
+        var n1 = parseFloat(prompt("Digite o valor total"));
+        var n2 = parseFloat(prompt("Digite quantos % você quer do valor total"));
+        var porcentagem = (n2/100) * n1;
+        document.write(n2 + "% de " + n1 + " é igual a " + porcentagem);
+    }
+    
+    if (operacao == "raiz quadrada") {
+        var n1 = parseFloat(prompt("Digite um valor igual ou maior que zero"));
+        if (n1 >= 0) {
+            var raizQuadrada = Math.sqrt(n1);
+            document.write("A raíz quadrada de " + n1 + " é " + raizQuadrada);
+        } else {
+            document.write("Indeterminado! Favor escolher um valor maior ou igual a 0");
+        }
+        
+    }
+    
+    if (operacao == "comparação") {
+        var n1 = parseFloat(prompt("Digite o primeiro valor a ser comparado"));
+        var n2 = parseFloat(prompt("Digite o segundo valor a ser comparado"));
+        if (n1 > n2) {
+            document.write(n1 + " > " + n2 + " , logo, " + n1 + " é o maior entre os dois números.");
+        }
+        else {
+            if(n1 < n2) {
+                document.write(n1 + " < " + n2 + " , logo, " + n2 + " é o maior entre os dois números."); 
+            }
+            if (n1 == n2) {
+                document.write(n1 + " = " + n2 + " , os dois números são iguais.");
+            }
+        }
+    }
+
+    if (operacao == "módulo") {
+        var n1 = parseFloat(prompt("Digite o valor"));
+        if (n1 >= 0) {
+            var modulo = n1 * 1;
+            document.write("|" + n1 + "| = " + modulo);
+        }
+        else {
+            var modulo = n1 * (-1);
+            document.write("|" + n1 + "| = " + modulo);
+        }
+    }
+    
+    
+</script>
+</html>

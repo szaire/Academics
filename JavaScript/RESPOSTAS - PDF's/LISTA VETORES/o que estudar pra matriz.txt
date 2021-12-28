@@ -1,0 +1,8 @@
+maior elemento geral
+maior/menor elemento de cada linha
+maior/menor elemento de cada coluna
+média geral
+média de cada linha 
+média de cada coluna 
+transposta de uma matriz
+multiplicação de matrizes

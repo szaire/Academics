@@ -1,0 +1,50 @@
+function quantidadeDigitos(n) {
+      let cnt = 0;
+      while (n > 0) {
+            n = parseInt(n / 10);
+            cnt++;
+      }
+      return cnt;
+}
+
+function ehPrimo (num) {
+      let cnt = 0;
+
+      for (i = 1 ; i <= num ; i++) {
+            if (num % i == 0) {
+            cnt++;
+            }
+      }
+      if (cnt == 2) {
+            return true;
+      }
+      else {
+            return false;
+      }
+}
+
+function rotacao(n) {
+      let qntNumRotacoes = 0;
+
+      for (let i = 1; i <= n; i++) {
+            let qntDigitos = quantidadeDigitos(i);
+            let cnt = 0;
+
+            for (let j = 1; j <= qntDigitos; j++) {
+                  let rotacao = (i % 10 * Math.pow(10, qntDigitos - 1)) + parseInt(i / 10);
+                  if (ehPrimo(rotacao) == true) {
+                        cnt++;
+                  }
+                  i = rotacao;
+            }
+            
+            if (cnt == qntDigitos) {
+                  qntNumRotacoes++;
+            }
+      }
+      return qntNumRotacoes;
+}
+
+let n = parseInt(prompt(`Digite um número`));
+let qntRotacoes = rotacao(n);
+document.write(`A quantidade de números até ${n} com está caracterísitca é: ${qntRotacoes}`);

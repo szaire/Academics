@@ -1,0 +1,16 @@
+< THE SYMBOL TABLE >  CPF_with_loops.com_  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+LOOP1                    	0010F     	-1        	LABEL     	(NOSEG)   
+OP1                      	00120     	-1        	LABEL     	(NOSEG)   
+ZERO1                    	00131     	-1        	LABEL     	(NOSEG)   
+DIGITO2                  	00133     	-1        	LABEL     	(NOSEG)   
+LOOP2                    	0013C     	-1        	LABEL     	(NOSEG)   
+OP2                      	0014D     	-1        	LABEL     	(NOSEG)   
+ZERO2                    	0015E     	-1        	LABEL     	(NOSEG)   
+ENDL                     	00160     	-1        	LABEL     	(NOSEG)   
+===================================================================================================
+[ 01/09/2021  --  11:44:57 ] 
+< END >
+ 

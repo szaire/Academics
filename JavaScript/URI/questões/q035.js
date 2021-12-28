@@ -1,0 +1,18 @@
+// ehPar = (num) => {
+//       if (num % 2 === 0) {
+//             return true;
+//       }
+//       else {
+//             return false;
+//       }
+// }
+
+var entrada = prompt().split(" ").map(x => parseInt(x));
+var [A, B, C, D] = entrada;
+
+if (B > C && D > A && C + D > A + B && C > 0 && D > 0 && A % 2 === 0) {
+      console.log('Valores aceitos');           
+} 
+else {
+      console.log('Valores nao aceitos');            
+}

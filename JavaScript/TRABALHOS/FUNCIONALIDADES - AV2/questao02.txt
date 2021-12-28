@@ -1,0 +1,39 @@
+var j = prompt(`Digite um inteiro`);
+
+function getlength(number) {
+    var cnt = 0;
+    var aux = number;
+    while (aux>0) {
+        aux = parseInt(aux/10);
+        cnt++; 
+    }
+    return cnt;
+}
+
+function Palindromoo (j) {
+
+    var a1 = j;
+    var aux = 0;
+    var inverso = 0;
+
+    for (i = 0 ; i <= getlength(j) ; i++) {
+        aux = Math.trunc(a1/10**i);
+        inverso = inverso + Math.trunc(aux%10);
+
+        if (getlength(inverso) < getlength(a1)) {
+            inverso = inverso * 10;
+        }
+    }
+
+    alert(`${a1} e b = ${inverso} <br>`)
+
+    if (a1 != inverso) {
+        alert(`O número não é palíndromo`);
+        return false;
+    } else if (a1 == inverso) {
+        alert(`O número é palíndromo`);
+        return true;
+    }
+}
+
+Palindromoo (j);

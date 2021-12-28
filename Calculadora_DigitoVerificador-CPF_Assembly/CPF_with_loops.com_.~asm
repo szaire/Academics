@@ -1,0 +1,84 @@
+
+; You may customize this and other start-up templates;
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+
+;INICIAR OS REGISTRADORES EM 0
+MOV AX,0
+MOV BX,0
+MOV CX,0
+MOV DX,0
+
+;*===PROGRAMA===*
+
+;DIGITO-1:
+mov cx,10
+
+loop1:
+
+mov ah,00h  ;instrucao de input
+int 16h     ;input de dados pelo teclado
+sub al,30h
+mul cl
+add bx,ax
+
+cmp cl,2
+jle op1
+
+loop loop1
+
+op1:
+mov ax,bx
+mov cl,11
+div cl
+cmp ah,2
+jb  zero1
+
+sub cl,ah   ;PRIMEIRO DIGITO
+mov dh,cl   ;COLOCA O PRIMEIRO DIGITO NO dh
+jmp digito2
+
+zero1:
+mov dh,0
+
+
+;DIGITO-2:
+digito2:
+mov ax,0
+mov bx,0
+mov cx,11
+
+loop2:
+
+mov ah,00h  ;instrucao de input
+int 16h     ;input de dados pelo teclado
+sub al,30h
+mul cl
+add bx,ax
+
+cmp cl,2
+jle op2
+
+loop loop2
+
+op2:
+mov ax,bx
+mov cl,11
+div cl
+cmp ah,2
+jb  zero2
+
+sub cl,ah   ;SEGUNDO DIGITO
+mov dl,cl   ;COLOCA O SEGUNDO DIGITO NO dl
+jmp endl
+
+zero2:
+mov dl,0
+
+endl:
+ret
+
+
+
+; [SOURCE]: C:\Users\samue\Desktop\UNIFOR - MATERIAIS E REVISÃO DE ESTUDOS\MATERIAIS EXCENSIAIS E TAREFAS\2º semestre\ARQUITETURA DE COMPUTADORES\emu8086\emu8086\MySource\CPF_with_loops.asm

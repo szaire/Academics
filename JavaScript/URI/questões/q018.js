@@ -1,0 +1,24 @@
+let banknote = parseInt(prompt());
+let drawValue = banknote;
+let drawBallot7 = parseInt((drawValue / 100));
+drawValue -= drawBallot7*100; // poderia ser drawValue = drawVallue%100; (!!!)
+let drawBallot6 = parseInt((drawValue / 50));
+drawValue -= drawBallot6*50; 
+let drawBallot5 = parseInt((drawValue / 20));
+drawValue -= drawBallot5*20; 
+let drawBallot4 = parseInt((drawValue / 10));
+drawValue -= drawBallot4*10; 
+let drawBallot3 = parseInt((drawValue / 5));
+drawValue -= drawBallot3*5; 
+let drawBallot2 = parseInt((drawValue / 2));
+drawValue -= drawBallot2*2; 
+let drawBallot1 = parseInt((drawValue / 1));
+drawValue -= drawBallot1*1;
+console.log(`${banknote}`);
+console.log(`${drawBallot7} nota(s) de R$ 100,00`); 
+console.log(`${drawBallot6} nota(s) de R$ 50,00`); 
+console.log(`${drawBallot5} nota(s) de R$ 20,00`); 
+console.log(`${drawBallot4} nota(s) de R$ 10,00`); 
+console.log(`${drawBallot3} nota(s) de R$ 5,00`); 
+console.log(`${drawBallot2} nota(s) de R$ 2,00`); 
+console.log(`${drawBallot1} nota(s) de R$ 1,00`); 

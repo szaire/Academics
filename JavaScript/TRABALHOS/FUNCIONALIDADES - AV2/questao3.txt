@@ -1,0 +1,15 @@
+<script>
+function decimalParaBinario (n) {
+    while (n>0) {
+        var resto = n%2;
+        n = Math.floor(n/2);            
+        soma = resto + soma;
+    }
+    return soma;
+}   
+
+var n = parseInt(prompt("n"));
+var soma = "";
+
+alert(decimalParaBinario(n));
+</script>

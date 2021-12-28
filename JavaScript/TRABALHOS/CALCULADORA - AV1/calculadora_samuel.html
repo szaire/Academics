@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculadora Samuel &lt;3 &lt;3 &lt;3 &lt;3 &lt;3</title>
+</head>
+<body>
+     <script>
+          let operacao = prompt('Digite a operação matemática requisitada dentre as opções:\n•soma\n•subtração\n•multiplicação\n•divisão\n•maior\n•menor\n•potência\n•porcentagem\n•raiz quadrada\n•módulo\n(ATENÇÃO: Atente-se para a digitação da operação!)'); //como fazer quebra de linha dentro de prompt = \n???
+          let num1;
+          let num2;
+          let r;
+          if (operacao == "porcentagem") {
+                    num1 = parseFloat(prompt('Digite a porcentagem (%)'));
+                    num2 = parseFloat(prompt('Digite o número (total)'));
+                    r = (num1/100.0)*num2;
+                    document.write(`${num1}% de ${num2} é ${r}`);
+               }
+          else if (operacao == "módulo") {
+               num1 = parseFloat(prompt('Digite um número'));
+               r = Math.abs(num1);
+               document.write(`O módulo de ${num1} é ${r}.`);
+          }
+          else if (operacao == "raiz quadrada") {
+               num1 = parseFloat(prompt('Digite um número'));
+               if (num1 < 0) {
+                    document.write(`Não existe raiz de número negativo! Aperte f5 e tente novamente.`);
+               }
+               else {
+                    r = Math.sqrt(num1);
+                    document.write(`A raiz quadrada de ${num1} é ${r}.`);
+               }
+          }
+          else if (operacao == "potência") {
+               num1 = parseFloat(prompt('Digite um número (base)'));
+               num2 = parseFloat(prompt('Digite o expoente (apenas valores inteiros!)'));
+               if (num1 == 0 && num2 < 0) {
+                    document.write(`Valor indeterminado!`);
+               }
+               else {
+                    r = Math.pow(num1, num2);
+                    document.write(`${num1} ^ ${num2} = ${r}`);
+               }
+          }
+          else {
+               num1 = parseFloat(prompt('Digite o primeiro número'));
+               num2 = parseFloat(prompt('Digite o segundo número'));
+               r = num1 + num2;
+               
+               if (operacao == "soma") {
+                    if (num1 < 0 && num2 >= 0) {
+                         r = num1 + num2;
+                         document.write(`- ${Math.abs(num1)} + ${num2} = ${r}`);
+                    }
+                    if (num1 < 0 && num2 < 0) {
+                         r = num1 + num2;
+                         document.write(`- ${Math.abs(num1)} + (${num2}) = ${r}`);
+                    }
+                    if (num1 >= 0 && num2 <= 0 ) {
+                         r = num1 + num2;
+                         document.write(`${num1} + (${num2}) = ${r}`);
+                    }
+               }
+               
+               if (operacao == "subtração") {
+                    if (num1 < 0 && num2 >= 0) {
+                         r = num1 - num2;
+                         document.write(`- ${Math.abs(num1)} - ${num2} = ${r}`);
+                    }
+                    if (num1 < 0 && num2 < 0) {
+                         r = num1 - num2;
+                         document.write(`- ${Math.abs(num1)} - (${num2}) = ${r}`);
+                    }
+                    if (num1 >= 0 && num2 <= 0 ) {
+                         r = num1 - num2;
+                         document.write(`${num1} - ${Math.abs(num2)} = ${r}`);
+                    }
+               }
+               
+               if (operacao == "multiplicação") {
+                    r = num1 * num2;
+                    document.write(`${num1} * ${num2} = ${r}`);
+               }
+               
+               if (operacao == "divisão") {
+                    if (num2 == 0) {
+
+                    }
+                    else {
+                         r = num1 / num2;
+                         document.write(`${num1} / ${num2} = ${r}`);
+                    }
+               }
+               
+               if (operacao == "maior") {
+                    r = num1 > num2;
+                    if (r == true) {
+                         document.write(`${num1} é maior que ${num2}.`);
+                    }
+                    else {
+                         document.write(`${num1} não é maior que ${num2}.`);
+                    }
+               }
+               
+               if (operacao == "menor") {
+                    r = num1 < num2;
+                    if (r == true) {
+                         document.write(`${num1} é menor que ${num2}.`);
+                    }
+                    else {
+                         document.write(`${num1} não é menor que ${num2}.`);
+                    }
+               }
+          }
+     </script>
+</body>
+</html>

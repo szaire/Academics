@@ -1,0 +1,1 @@
+console.log('Jamais me acharão, estou escondido!'); //imprime comandos no console da página web

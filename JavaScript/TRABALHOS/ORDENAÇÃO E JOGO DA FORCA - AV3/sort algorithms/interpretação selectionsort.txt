@@ -1,0 +1,46 @@
+array = [4, 3, 1, 2] // tamanho: 4 
+	 0, 1, 2, 3
+
+		        if (min > j)
+i	min	j	if (0 > 1)
+0	0	1	4 > 3? ok: min = 1
+
+
+i	min	j	if (1 > 2)
+0	1	2	3 > 1? ok: min = 2
+
+
+i	min	j	if (2 > 3)
+0	2	3	1 > 2? no: min = 2
+
+
+		if (min != i)
+i	min	if (2 != 0)
+0	2	tmp = 4
+		array[0] = 1
+		array[2] = 4
+
+array atualizado: [1, 3, 4, 2]
+
+i	min	j	if (1 > 2)
+1	1	2	3 > 4? no: min = 1
+
+i	min	j	if (1 > 3)
+1	1	3	3 > 2? ok: min = 3
+
+i	min	if (3 != 1)
+1	3	tmp = 3
+		array[1] = 2
+		array[3] = 3
+
+array atualizado: [1, 2, 4, 3]
+
+i	min	j	if (2 > 3)
+2	2	3	4 > 3? ok: min = 3
+
+i	min	if (3 != 2)
+2	3	tmp = 4
+		array[2] = 3
+		array[3] = 4
+
+array atualizado: [1, 2, 3, 4]
