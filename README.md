@@ -2,7 +2,7 @@
 
 ## Contents
 
-Linear Algebra -
- - Computer Architecture
- - Java 
- - JavaScript
+- Linear Algebra
+- Computer Architecture
+- Java 
+- JavaScript
